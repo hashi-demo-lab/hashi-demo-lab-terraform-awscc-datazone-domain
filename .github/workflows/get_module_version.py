@@ -1,7 +1,6 @@
 import os
 import requests
 import json
-from packaging import version
 
 def get_latest_version(tfe_hostname, org_name, module_name, provider_name, token):
     url = f"https://{tfe_hostname}/api/registry/v1/modules/{org_name}/{module_name}/{provider_name}/"
@@ -17,8 +16,9 @@ def get_latest_version(tfe_hostname, org_name, module_name, provider_name, token
         if not versions:
             raise ValueError("No versions found")
 
-        sorted_versions = sorted(versions, key=lambda v: version.parse(v), reverse=True)
+        sorted_versions = sorted(versions, key=lambda v: tuple(int(num) for num in v.split('.')), reverse=True)
         latest_version = sorted_versions[0]
+
 
         return latest_version
     except requests.RequestException as e:
