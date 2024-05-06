@@ -2,8 +2,8 @@ data "aws_caller_identity" "current" {}
 
 #Execution role to be attached to Datazone Domain, has to be 
 resource "awscc_iam_role" "this" {
-  role_name   = "${var.datazone_domain_name}-exec-role"
-  path = "/service-role/"
+  role_name = "${var.datazone_domain_name}-exec-role"
+  path      = "/service-role/"
   assume_role_policy_document = jsonencode({
     "Version" : "2012-10-17",
     "Statement" : [
@@ -112,32 +112,3 @@ resource "awscc_datazone_project" "this" {
   description       = try(each.value.description)
   glossary_terms    = try(each.value.glossary_terms)
 }
-
-
-
-################################################################################################
-# Due to separation of duties, the following resources below will be moved to a different module
-# moved to terraform-aws-datazone-environments/main.tf
-
-/* # create environment profiles(s)
-resource "awscc_datazone_environment_profile" "this" {
-  for_each = var.datazone_environment_profiles
-
-  aws_account_id                   = each.value.aws_account_id
-  aws_account_region               = each.value.region
-  domain_identifier                = awscc_datazone_domain.this.id
-  environment_blueprint_identifier = awscc_datazone_environment_blueprint_configuration.this[each.value.environment_blueprint_identifier].environment_blueprint_id
-  name                             = each.key
-  description                      = try(each.value.description)
-  project_identifier               = awscc_datazone_project.this[each.value.project_name].project_id
-  user_parameters                  = try(each.value.user_parameters)
-}
-
-resource "awscc_datazone_environment" "this" {
-  for_each = var.datazone_environments
-
-  domain_identifier              = awscc_datazone_domain.this.id
-  environment_profile_identifier = awscc_datazone_environment_profile.this[each.value.environment_profile_identifier].environment_profile_id
-  name                           = each.value.name
-  project_identifier             = awscc_datazone_project.this[each.value.project_target].project_id
-} */

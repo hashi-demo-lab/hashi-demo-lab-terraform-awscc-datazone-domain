@@ -2,16 +2,16 @@
 # WARNING: Generated module tests should be considered experimental and be reviewed by the module author.
 variables {
 
-aws_account="855831148133"
-datazone_domain_name="tftest_domain"
-datazone_description="AWS DataZone Domain"
-datazone_kms_key_identifier=null
-single_sign_on={}
-tags =null
-region ="ap-southeast-2"
+  aws_account                 = "855831148133"
+  datazone_domain_name        = "tftest_domain"
+  datazone_description        = "AWS DataZone Domain"
+  datazone_kms_key_identifier = null
+  single_sign_on              = {}
+  tags                        = null
+  region                      = "ap-southeast-2"
 
-# Environment Blueprints - today AWS only support DefaultDataWarehouse, DefaultDataLake
-environment_blueprints = {
+  # Environment Blueprints - today AWS only support DefaultDataWarehouse, DefaultDataLake
+  environment_blueprints = {
     DefaultDataWarehouse = {
       enabled_regions                  = ["ap-southeast-2"]
       environment_blueprint_identifier = "DefaultDataWarehouse"
@@ -20,11 +20,11 @@ environment_blueprints = {
       enabled_regions                  = ["ap-southeast-2"]
       environment_blueprint_identifier = "DefaultDataLake"
     }
-}
+  }
 }
 
 provider "awscc" {
-    region = var.region
+  region = var.region
 }
 
 # outputs.tf.tftest.hcl
