@@ -5,22 +5,13 @@ module "datazone_domain" {
   version = "~>  0.2.0"
 
   aws_account                 = aws_caller_identity.current.account_id
-  datazone_domain_name        = "example_domain"
-  datazone_description        = "AWS DataZone Domain"
-  datazone_kms_key_identifier = null
-  single_sign_on              = {}
-  tags                        = null
-  region                      = "ap-southeast-2"
+  datazone_domain_name        = var.datazone_domain_name
+  datazone_description        = var.datazone_domain_name
+  datazone_kms_key_identifier = var.datazone_kms_key_identifier
+  single_sign_on              = var.single_sign_on
+  tags                        = var.tags
+  region                      = var.region
 
-  environment_blueprints = {
-    DefaultDataWarehouse = {
-      enabled_regions                  = ["ap-southeast-2"]
-      environment_blueprint_identifier = "DefaultDataWarehouse"
-    }
-    DefaultDataLake = {
-      enabled_regions                  = ["ap-southeast-2"]
-      environment_blueprint_identifier = "DefaultDataLake"
-    }
-  }
+  environment_blueprints = var.environment_blueprints
 
 }
