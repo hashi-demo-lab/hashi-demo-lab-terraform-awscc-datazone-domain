@@ -4,7 +4,7 @@ module "datazone_domain" {
   source  = "app.terraform.io/tfc-demo-au/datazone-domain/awscc"
   version = "~>  0.2.0"
 
-  aws_account                 = aws_caller_identity.current.account_id
+  aws_account                 = data.aws_caller_identity.current.account_id
   datazone_domain_name        = var.datazone_domain_name
   datazone_description        = var.datazone_domain_name
   datazone_kms_key_identifier = var.datazone_kms_key_identifier
