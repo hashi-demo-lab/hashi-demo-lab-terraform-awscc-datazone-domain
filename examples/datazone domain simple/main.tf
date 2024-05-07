@@ -13,5 +13,6 @@ module "datazone_domain" {
   region                      = var.region
 
   environment_blueprints = var.environment_blueprints
+  datazone_projects      = var.datazone_projects
 
 }

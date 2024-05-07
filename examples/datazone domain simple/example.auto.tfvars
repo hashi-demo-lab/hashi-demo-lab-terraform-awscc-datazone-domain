@@ -14,4 +14,11 @@ environment_blueprints = {
       enabled_regions                  = ["ap-southeast-2"]
       environment_blueprint_identifier = "DefaultDataLake"
     }
+}    
+
+datazone_projects = {
+    example_project = {
+      description    = "Example Project"
+      glossary_terms = ["example"]
+    }
 }
