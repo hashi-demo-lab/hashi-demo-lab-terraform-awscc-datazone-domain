@@ -1,4 +1,4 @@
-# tf-module-template - test publishing
+# AWS DataZone Domain Module
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
