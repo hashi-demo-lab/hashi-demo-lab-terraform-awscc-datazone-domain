@@ -15,8 +15,8 @@ output "datazone_domain_id" {
   value = awscc_datazone_domain.this.domain_id
 }
 
-output "environment_project_id" {
-  value = awscc_datazone_project.this["environment"].project_id
+output "projects" {
+  value = awscc_datazone_project.this
 }
 output "s3_datazone" {
   value = aws_s3_bucket.datazone.id
