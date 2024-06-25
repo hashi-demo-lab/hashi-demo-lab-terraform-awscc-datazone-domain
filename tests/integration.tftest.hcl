@@ -2,7 +2,7 @@
 variables {
 
   aws_account                 = "855831148133"
-  datazone_domain_name        = "tftest_domain"
+  datazone_domain_name        = "tftest1_domain"
   datazone_description        = "AWS DataZone Domain"
   datazone_kms_key_identifier = null
   single_sign_on              = {}
