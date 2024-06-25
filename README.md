@@ -6,14 +6,14 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.4 |
-| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | ~> 0.7 |
+| <a name="requirement_awscc"></a> [awscc](#requirement\_awscc) | ~> 1.3 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.45.0 |
-| <a name="provider_awscc"></a> [awscc](#provider\_awscc) | 0.76.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.4 |
+| <a name="provider_awscc"></a> [awscc](#provider\_awscc) | ~> 1.3 |
 
 ## Modules
 
@@ -54,13 +54,14 @@
 
 | Name | Description |
 |------|-------------|
-| <a name="output_awscc_executionrole"></a> [awscc\_executionrole](#output\_awscc\_executionrole) | n/a |
-| <a name="output_datazone_domain_id"></a> [datazone\_domain\_id](#output\_datazone\_domain\_id) | n/a |
-| <a name="output_datazone_portal"></a> [datazone\_portal](#output\_datazone\_portal) | n/a |
-| <a name="output_datazone_role_arn"></a> [datazone\_role\_arn](#output\_datazone\_role\_arn) | n/a |
-| <a name="output_datazone_role_id"></a> [datazone\_role\_id](#output\_datazone\_role\_id) | n/a |
-| <a name="output_datazone_status"></a> [datazone\_status](#output\_datazone\_status) | n/a |
-| <a name="output_environment_project_id"></a> [environment\_project\_id](#output\_environment\_project\_id) | n/a |
-| <a name="output_s3_datazone"></a> [s3\_datazone](#output\_s3\_datazone) | n/a |
-| <a name="output_s3_datazone_region"></a> [s3\_datazone\_region](#output\_s3\_datazone\_region) | n/a |
+| <a name="output_awscc_executionrole"></a> [awscc\_executionrole](#output\_awscc\_executionrole) | DataZone execution role object |
+| <a name="output_datazone_domain_id"></a> [datazone\_domain\_id](#output\_datazone\_domain\_id) | DataZone domain id |
+| <a name="output_datazone_environment_blueprints"></a> [datazone\_environment\_blueprints](#output\_datazone\_environment\_blueprints) | DataZone environment blueprints |
+| <a name="output_datazone_portal"></a> [datazone\_portal](#output\_datazone\_portal) | DataZone portal URL |
+| <a name="output_datazone_role_arn"></a> [datazone\_role\_arn](#output\_datazone\_role\_arn) | DataZone Execution Role ARN |
+| <a name="output_datazone_role_id"></a> [datazone\_role\_id](#output\_datazone\_role\_id) | Datazone Execution Role Id |
+| <a name="output_datazone_status"></a> [datazone\_status](#output\_datazone\_status) | DataZone status |
+| <a name="output_projects"></a> [projects](#output\_projects) | DataZone projects |
+| <a name="output_s3_datazone"></a> [s3\_datazone](#output\_s3\_datazone) | name of the datazone s3 bucket |
+| <a name="output_s3_datazone_region"></a> [s3\_datazone\_region](#output\_s3\_datazone\_region) | region of the datazone s3 bucket |
 <!-- END_TF_DOCS -->
