@@ -1,5 +1,7 @@
 # AWS DataZone Domain Module
 
+![datazone-domain](/img/image.png)
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
