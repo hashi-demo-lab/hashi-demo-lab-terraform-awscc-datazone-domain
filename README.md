@@ -1,6 +1,8 @@
 # AWS DataZone Domain Module
 
-![datazone-domain](/img/image.png)
+<p align="center">
+  <img src="https://lh3.googleusercontent.com/d/1AKEE3QD-J8QZKP4zEtmg_uQ5YUk2b4HE" alt="Image 1 Description" width="45%" />
+</p>
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
